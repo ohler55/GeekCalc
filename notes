@@ -1,0 +1,37 @@
+1.0.7
+    i386 support
+    comma key can be used to mark the decimal point
+
+1.0.6
+    Fixed square root mapping
+    changed non-decimal input limits
+    moved buttons around for reduced mouse motion
+
+1.0.5
+    key mapping for the enter key fixed for all keyboards
+    pi
+
+1.0.4
+    close button quits
+    return is =
+    clear key or control-C clears
+
+1.0.2
+    added log base y of x
+    fixed inverse cosine bug
+
+    --- add app owner
+
+-------------------------
+error when using delete key, digits seem to still be there
+
+
+implement cut and paste to x
+	  NSPasteboard
+		NSGeneralPboard
+
+should - be allowed as first character?
+
+implement expression evaluation
+	  evaluate selected or all if nothing selected
+

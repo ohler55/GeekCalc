@@ -1,0 +1,1 @@
+GeekCalc is designed for the software developer. It includes the basic calculator functionality but also supports signed and unsigned integer math and bit operations for 64, 32, 16, and 8 bit integers. An ASCII mode and ASCII character table are also included. Multiple display formats are supported and include decimal, hexidecimal, octal, and binary.

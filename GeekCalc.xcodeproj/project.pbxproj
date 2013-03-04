@@ -1,0 +1,670 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXApplicationTarget section */
+		29B97326FDCFA39411CA2CEA /* GeekCalc */ = {
+			isa = PBXApplicationTarget;
+			buildConfigurationList = D1E64D9C08A825740092A58C /* Build configuration list for PBXApplicationTarget "GeekCalc" */;
+			buildPhases = (
+				29B97327FDCFA39411CA2CEA /* Headers */,
+				29B97328FDCFA39411CA2CEA /* Resources */,
+				29B9732BFDCFA39411CA2CEA /* Sources */,
+				29B9732DFDCFA39411CA2CEA /* Frameworks */,
+			);
+			dependencies = (
+			);
+			name = GeekCalc;
+			productInstallPath = "$(HOME)/Applications";
+			productName = GeekCalc;
+			productReference = 17587328FF379C6511CA2CBB /* GeekCalc.app */;
+			productSettingsXML = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>
+<!DOCTYPE plist PUBLIC \"-//Apple//DTD PLIST 1.0//EN\" \"http://www.apple.com/DTDs/PropertyList-1.0.dtd\">
+<plist version=\"1.0\">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleExecutable</key>
+	<string>GeekCalc</string>
+	<key>CFBundleGetInfoString</key>
+	<string>1.0.8</string>
+	<key>CFBundleIconFile</key>
+	<string>GeekCalc.icns</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>GeekCalc</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.0.8</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>CFBundleVersion</key>
+	<string>1.0.8</string>
+	<key>NSMainNibFile</key>
+	<string>MainMenu</string>
+	<key>NSPrincipalClass</key>
+	<string>NSApplication</string>
+</dict>
+</plist>
+";
+		};
+/* End PBXApplicationTarget section */
+
+/* Begin PBXBuildFile section */
+		080E96DCFE201CFB7F000001 /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 29B97318FDCFA39411CA2CEA /* MainMenu.nib */; };
+		089C165EFE840E0CC02AAC07 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
+		1058C7A3FEA54F0111CA2CBB /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+		29B9732CFDCFA39411CA2CEA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
+		32CA4F650368D2AA00C91783 /* GeekCalc_Prefix.h in Headers */ = {isa = PBXBuildFile; fileRef = 32CA4F630368D1EE00C91783 /* GeekCalc_Prefix.h */; };
+		D10CC8A90411C6E2001FE253 /* eRaisedToX.pct in Resources */ = {isa = PBXBuildFile; fileRef = D10CC8A80411C6E2001FE253 /* eRaisedToX.pct */; };
+		D119F27F0409E3F1001FE253 /* GeekCalc.icns in Resources */ = {isa = PBXBuildFile; fileRef = D119F27E0409E3F1001FE253 /* GeekCalc.icns */; };
+		D12B370C04098D41001FE253 /* AsciiTable.nib in Resources */ = {isa = PBXBuildFile; fileRef = D12B370A04098D41001FE253 /* AsciiTable.nib */; };
+		D13230F7040BEBBE00660417 /* CalcWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = D13230F5040BEBBE00660417 /* CalcWindow.h */; };
+		D13230F8040BEBBE00660417 /* CalcWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = D13230F6040BEBBE00660417 /* CalcWindow.m */; };
+		D145D8AC040E7BCF00660417 /* multiply.pct in Resources */ = {isa = PBXBuildFile; fileRef = D145D8AB040E7BCF00660417 /* multiply.pct */; };
+		D14CB86704087FC7001FE253 /* acos.pct in Resources */ = {isa = PBXBuildFile; fileRef = D14CB86604087FC7001FE253 /* acos.pct */; };
+		D14CB86904087FE2001FE253 /* asin.pct in Resources */ = {isa = PBXBuildFile; fileRef = D14CB86804087FE2001FE253 /* asin.pct */; };
+		D14CB86B04087FEA001FE253 /* atan.pct in Resources */ = {isa = PBXBuildFile; fileRef = D14CB86A04087FEA001FE253 /* atan.pct */; };
+		D14CB87104088008001FE253 /* sqrt.pct in Resources */ = {isa = PBXBuildFile; fileRef = D14CB87004088008001FE253 /* sqrt.pct */; };
+		D14CB87304088016001FE253 /* tenRaisedToX.pct in Resources */ = {isa = PBXBuildFile; fileRef = D14CB87204088015001FE253 /* tenRaisedToX.pct */; };
+		D14CB8750408821C001FE253 /* acosh.pct in Resources */ = {isa = PBXBuildFile; fileRef = D14CB8740408821C001FE253 /* acosh.pct */; };
+		D14CB87704088240001FE253 /* asinh.pct in Resources */ = {isa = PBXBuildFile; fileRef = D14CB8760408823F001FE253 /* asinh.pct */; };
+		D14CB87904088249001FE253 /* atanh.pct in Resources */ = {isa = PBXBuildFile; fileRef = D14CB87804088249001FE253 /* atanh.pct */; };
+		D14CB87B0408891B001FE253 /* swapXM.pct in Resources */ = {isa = PBXBuildFile; fileRef = D14CB87A0408891B001FE253 /* swapXM.pct */; };
+		D14CB87D04088926001FE253 /* swapXY.pct in Resources */ = {isa = PBXBuildFile; fileRef = D14CB87C04088926001FE253 /* swapXY.pct */; };
+		D14CB87F04088930001FE253 /* swapYM.pct in Resources */ = {isa = PBXBuildFile; fileRef = D14CB87E04088930001FE253 /* swapYM.pct */; };
+		D157DB44040F2A5D00660417 /* xback.pct in Resources */ = {isa = PBXBuildFile; fileRef = D157DB43040F2A5D00660417 /* xback.pct */; };
+		D16733970405B353001FE252 /* Controller.h in Headers */ = {isa = PBXBuildFile; fileRef = D16733950405B353001FE252 /* Controller.h */; };
+		D16733980405B353001FE252 /* Controller.m in Sources */ = {isa = PBXBuildFile; fileRef = D16733960405B353001FE252 /* Controller.m */; };
+		D17A643604080318001FE253 /* yRaisedToX.pct in Resources */ = {isa = PBXBuildFile; fileRef = D17A643504080318001FE253 /* yRaisedToX.pct */; };
+		D17A643804080AFF001FE253 /* squared.pct in Resources */ = {isa = PBXBuildFile; fileRef = D17A643704080AFF001FE253 /* squared.pct */; };
+		D1A8979904572E3500660417 /* logXY.pct in Resources */ = {isa = PBXBuildFile; fileRef = D1A8979804572E3500660417 /* logXY.pct */; };
+		D1DB77EA1067667C001CCAF9 /* GeekCalc_Prefix.h in Headers */ = {isa = PBXBuildFile; fileRef = 32CA4F630368D1EE00C91783 /* GeekCalc_Prefix.h */; };
+		D1DB77EB1067667C001CCAF9 /* Controller.h in Headers */ = {isa = PBXBuildFile; fileRef = D16733950405B353001FE252 /* Controller.h */; };
+		D1DB77EC1067667C001CCAF9 /* CalcWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = D13230F5040BEBBE00660417 /* CalcWindow.h */; };
+		D1DB77EE1067667C001CCAF9 /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 29B97318FDCFA39411CA2CEA /* MainMenu.nib */; };
+		D1DB77EF1067667C001CCAF9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
+		D1DB77F01067667C001CCAF9 /* yRaisedToX.pct in Resources */ = {isa = PBXBuildFile; fileRef = D17A643504080318001FE253 /* yRaisedToX.pct */; };
+		D1DB77F11067667C001CCAF9 /* squared.pct in Resources */ = {isa = PBXBuildFile; fileRef = D17A643704080AFF001FE253 /* squared.pct */; };
+		D1DB77F21067667C001CCAF9 /* acos.pct in Resources */ = {isa = PBXBuildFile; fileRef = D14CB86604087FC7001FE253 /* acos.pct */; };
+		D1DB77F31067667C001CCAF9 /* asin.pct in Resources */ = {isa = PBXBuildFile; fileRef = D14CB86804087FE2001FE253 /* asin.pct */; };
+		D1DB77F41067667C001CCAF9 /* atan.pct in Resources */ = {isa = PBXBuildFile; fileRef = D14CB86A04087FEA001FE253 /* atan.pct */; };
+		D1DB77F51067667C001CCAF9 /* sqrt.pct in Resources */ = {isa = PBXBuildFile; fileRef = D14CB87004088008001FE253 /* sqrt.pct */; };
+		D1DB77F61067667C001CCAF9 /* tenRaisedToX.pct in Resources */ = {isa = PBXBuildFile; fileRef = D14CB87204088015001FE253 /* tenRaisedToX.pct */; };
+		D1DB77F71067667C001CCAF9 /* acosh.pct in Resources */ = {isa = PBXBuildFile; fileRef = D14CB8740408821C001FE253 /* acosh.pct */; };
+		D1DB77F81067667C001CCAF9 /* asinh.pct in Resources */ = {isa = PBXBuildFile; fileRef = D14CB8760408823F001FE253 /* asinh.pct */; };
+		D1DB77F91067667C001CCAF9 /* atanh.pct in Resources */ = {isa = PBXBuildFile; fileRef = D14CB87804088249001FE253 /* atanh.pct */; };
+		D1DB77FA1067667C001CCAF9 /* swapXM.pct in Resources */ = {isa = PBXBuildFile; fileRef = D14CB87A0408891B001FE253 /* swapXM.pct */; };
+		D1DB77FB1067667C001CCAF9 /* swapXY.pct in Resources */ = {isa = PBXBuildFile; fileRef = D14CB87C04088926001FE253 /* swapXY.pct */; };
+		D1DB77FC1067667C001CCAF9 /* swapYM.pct in Resources */ = {isa = PBXBuildFile; fileRef = D14CB87E04088930001FE253 /* swapYM.pct */; };
+		D1DB77FD1067667C001CCAF9 /* AsciiTable.nib in Resources */ = {isa = PBXBuildFile; fileRef = D12B370A04098D41001FE253 /* AsciiTable.nib */; };
+		D1DB77FE1067667C001CCAF9 /* GeekCalc.icns in Resources */ = {isa = PBXBuildFile; fileRef = D119F27E0409E3F1001FE253 /* GeekCalc.icns */; };
+		D1DB77FF1067667C001CCAF9 /* multiply.pct in Resources */ = {isa = PBXBuildFile; fileRef = D145D8AB040E7BCF00660417 /* multiply.pct */; };
+		D1DB78001067667C001CCAF9 /* xback.pct in Resources */ = {isa = PBXBuildFile; fileRef = D157DB43040F2A5D00660417 /* xback.pct */; };
+		D1DB78011067667C001CCAF9 /* yback.pct in Resources */ = {isa = PBXBuildFile; fileRef = D1FB371D040FCF3B00660417 /* yback.pct */; };
+		D1DB78021067667C001CCAF9 /* eRaisedToX.pct in Resources */ = {isa = PBXBuildFile; fileRef = D10CC8A80411C6E2001FE253 /* eRaisedToX.pct */; };
+		D1DB78031067667C001CCAF9 /* logXY.pct in Resources */ = {isa = PBXBuildFile; fileRef = D1A8979804572E3500660417 /* logXY.pct */; };
+		D1DB78051067667C001CCAF9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
+		D1DB78061067667C001CCAF9 /* Controller.m in Sources */ = {isa = PBXBuildFile; fileRef = D16733960405B353001FE252 /* Controller.m */; };
+		D1DB78071067667C001CCAF9 /* CalcWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = D13230F6040BEBBE00660417 /* CalcWindow.m */; };
+		D1DB78091067667C001CCAF9 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+		D1FB371E040FCF3B00660417 /* yback.pct in Resources */ = {isa = PBXBuildFile; fileRef = D1FB371D040FCF3B00660417 /* yback.pct */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		089C165DFE840E0CC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		17587328FF379C6511CA2CBB /* GeekCalc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; path = GeekCalc.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		29B97319FDCFA39411CA2CEA /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/MainMenu.nib; sourceTree = "<group>"; };
+		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		32CA4F630368D1EE00C91783 /* GeekCalc_Prefix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeekCalc_Prefix.h; sourceTree = "<group>"; };
+		D10CC8A80411C6E2001FE253 /* eRaisedToX.pct */ = {isa = PBXFileReference; lastKnownFileType = image.pict; name = eRaisedToX.pct; path = icons/eRaisedToX.pct; sourceTree = "<group>"; };
+		D119F27E0409E3F1001FE253 /* GeekCalc.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = GeekCalc.icns; sourceTree = "<group>"; };
+		D12B370B04098D41001FE253 /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/AsciiTable.nib; sourceTree = "<group>"; };
+		D13230F5040BEBBE00660417 /* CalcWindow.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = CalcWindow.h; sourceTree = "<group>"; };
+		D13230F6040BEBBE00660417 /* CalcWindow.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = CalcWindow.m; sourceTree = "<group>"; };
+		D145D8AB040E7BCF00660417 /* multiply.pct */ = {isa = PBXFileReference; lastKnownFileType = image.pict; name = multiply.pct; path = icons/multiply.pct; sourceTree = "<group>"; };
+		D14CB86604087FC7001FE253 /* acos.pct */ = {isa = PBXFileReference; lastKnownFileType = image.pict; name = acos.pct; path = icons/acos.pct; sourceTree = "<group>"; };
+		D14CB86804087FE2001FE253 /* asin.pct */ = {isa = PBXFileReference; lastKnownFileType = image.pict; name = asin.pct; path = icons/asin.pct; sourceTree = "<group>"; };
+		D14CB86A04087FEA001FE253 /* atan.pct */ = {isa = PBXFileReference; lastKnownFileType = image.pict; name = atan.pct; path = icons/atan.pct; sourceTree = "<group>"; };
+		D14CB87004088008001FE253 /* sqrt.pct */ = {isa = PBXFileReference; lastKnownFileType = image.pict; name = sqrt.pct; path = icons/sqrt.pct; sourceTree = "<group>"; };
+		D14CB87204088015001FE253 /* tenRaisedToX.pct */ = {isa = PBXFileReference; lastKnownFileType = image.pict; name = tenRaisedToX.pct; path = icons/tenRaisedToX.pct; sourceTree = "<group>"; };
+		D14CB8740408821C001FE253 /* acosh.pct */ = {isa = PBXFileReference; lastKnownFileType = image.pict; name = acosh.pct; path = icons/acosh.pct; sourceTree = "<group>"; };
+		D14CB8760408823F001FE253 /* asinh.pct */ = {isa = PBXFileReference; lastKnownFileType = image.pict; name = asinh.pct; path = icons/asinh.pct; sourceTree = "<group>"; };
+		D14CB87804088249001FE253 /* atanh.pct */ = {isa = PBXFileReference; lastKnownFileType = image.pict; name = atanh.pct; path = icons/atanh.pct; sourceTree = "<group>"; };
+		D14CB87A0408891B001FE253 /* swapXM.pct */ = {isa = PBXFileReference; lastKnownFileType = image.pict; name = swapXM.pct; path = icons/swapXM.pct; sourceTree = "<group>"; };
+		D14CB87C04088926001FE253 /* swapXY.pct */ = {isa = PBXFileReference; lastKnownFileType = image.pict; name = swapXY.pct; path = icons/swapXY.pct; sourceTree = "<group>"; };
+		D14CB87E04088930001FE253 /* swapYM.pct */ = {isa = PBXFileReference; lastKnownFileType = image.pict; name = swapYM.pct; path = icons/swapYM.pct; sourceTree = "<group>"; };
+		D157DB43040F2A5D00660417 /* xback.pct */ = {isa = PBXFileReference; lastKnownFileType = image.pict; name = xback.pct; path = icons/xback.pct; sourceTree = "<group>"; };
+		D16733950405B353001FE252 /* Controller.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = Controller.h; sourceTree = "<group>"; };
+		D16733960405B353001FE252 /* Controller.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = Controller.m; sourceTree = "<group>"; };
+		D17A643504080318001FE253 /* yRaisedToX.pct */ = {isa = PBXFileReference; lastKnownFileType = image.pict; name = yRaisedToX.pct; path = icons/yRaisedToX.pct; sourceTree = "<group>"; };
+		D17A643704080AFF001FE253 /* squared.pct */ = {isa = PBXFileReference; lastKnownFileType = image.pict; name = squared.pct; path = icons/squared.pct; sourceTree = "<group>"; };
+		D1A8979804572E3500660417 /* logXY.pct */ = {isa = PBXFileReference; lastKnownFileType = image.pict; name = logXY.pct; path = icons/logXY.pct; sourceTree = "<group>"; };
+		D1DB780E1067667C001CCAF9 /* Info-GeekCalc__Upgraded_.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-GeekCalc__Upgraded_.plist"; sourceTree = "<group>"; };
+		D1DB780F1067667C001CCAF9 /* GeekCalc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = GeekCalc.app; path = build/Deployment/GeekCalc.app; sourceTree = "<group>"; };
+		D1FB371D040FCF3B00660417 /* yback.pct */ = {isa = PBXFileReference; lastKnownFileType = image.pict; name = yback.pct; path = icons/yback.pct; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		29B9732DFDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1058C7A3FEA54F0111CA2CBB /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D1DB78081067667C001CCAF9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D1DB78091067667C001CCAF9 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		080E96DDFE201D6D7F000001 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				D16733950405B353001FE252 /* Controller.h */,
+				D16733960405B353001FE252 /* Controller.m */,
+				D13230F5040BEBBE00660417 /* CalcWindow.h */,
+				D13230F6040BEBBE00660417 /* CalcWindow.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
+			);
+			name = "Linked Frameworks";
+			sourceTree = "<group>";
+		};
+		1058C7A2FEA54F0111CA2CBB /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				29B97325FDCFA39411CA2CEA /* Foundation.framework */,
+				29B97324FDCFA39411CA2CEA /* AppKit.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				17587328FF379C6511CA2CBB /* GeekCalc.app */,
+				D1DB780F1067667C001CCAF9 /* GeekCalc.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* GeekCalc */ = {
+			isa = PBXGroup;
+			children = (
+				080E96DDFE201D6D7F000001 /* Classes */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+				D119F2800409E412001FE253 /* Images */,
+				D1DB780E1067667C001CCAF9 /* Info-GeekCalc__Upgraded_.plist */,
+			);
+			name = GeekCalc;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				32CA4F630368D1EE00C91783 /* GeekCalc_Prefix.h */,
+				29B97316FDCFA39411CA2CEA /* main.m */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				29B97318FDCFA39411CA2CEA /* MainMenu.nib */,
+				D12B370A04098D41001FE253 /* AsciiTable.nib */,
+				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
+				D17A643504080318001FE253 /* yRaisedToX.pct */,
+				D17A643704080AFF001FE253 /* squared.pct */,
+				D14CB86604087FC7001FE253 /* acos.pct */,
+				D14CB86804087FE2001FE253 /* asin.pct */,
+				D14CB86A04087FEA001FE253 /* atan.pct */,
+				D14CB87004088008001FE253 /* sqrt.pct */,
+				D14CB87204088015001FE253 /* tenRaisedToX.pct */,
+				D14CB8740408821C001FE253 /* acosh.pct */,
+				D14CB8760408823F001FE253 /* asinh.pct */,
+				D14CB87804088249001FE253 /* atanh.pct */,
+				D14CB87A0408891B001FE253 /* swapXM.pct */,
+				D14CB87C04088926001FE253 /* swapXY.pct */,
+				D14CB87E04088930001FE253 /* swapYM.pct */,
+				D145D8AB040E7BCF00660417 /* multiply.pct */,
+				D157DB43040F2A5D00660417 /* xback.pct */,
+				D1FB371D040FCF3B00660417 /* yback.pct */,
+				D10CC8A80411C6E2001FE253 /* eRaisedToX.pct */,
+				D1A8979804572E3500660417 /* logXY.pct */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */,
+				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D119F2800409E412001FE253 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				D119F27E0409E3F1001FE253 /* GeekCalc.icns */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		29B97327FDCFA39411CA2CEA /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				32CA4F650368D2AA00C91783 /* GeekCalc_Prefix.h in Headers */,
+				D16733970405B353001FE252 /* Controller.h in Headers */,
+				D13230F7040BEBBE00660417 /* CalcWindow.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D1DB77E91067667C001CCAF9 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D1DB77EA1067667C001CCAF9 /* GeekCalc_Prefix.h in Headers */,
+				D1DB77EB1067667C001CCAF9 /* Controller.h in Headers */,
+				D1DB77EC1067667C001CCAF9 /* CalcWindow.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		D1DB77E81067667C001CCAF9 /* GeekCalc (Upgraded) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D1DB780A1067667C001CCAF9 /* Build configuration list for PBXNativeTarget "GeekCalc (Upgraded)" */;
+			buildPhases = (
+				D1DB77E91067667C001CCAF9 /* Headers */,
+				D1DB77ED1067667C001CCAF9 /* Resources */,
+				D1DB78041067667C001CCAF9 /* Sources */,
+				D1DB78081067667C001CCAF9 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "GeekCalc (Upgraded)";
+			productInstallPath = "$(HOME)/Applications";
+			productName = GeekCalc;
+			productReference = D1DB780F1067667C001CCAF9 /* GeekCalc.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = D1E64DA008A825740092A58C /* Build configuration list for PBXProject "GeekCalc" */;
+			compatibilityVersion = "Xcode 3.2";
+			hasScannedForEncodings = 1;
+			mainGroup = 29B97314FDCFA39411CA2CEA /* GeekCalc */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D1DB77E81067667C001CCAF9 /* GeekCalc (Upgraded) */,
+				29B97326FDCFA39411CA2CEA /* GeekCalc */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		29B97328FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				080E96DCFE201CFB7F000001 /* MainMenu.nib in Resources */,
+				089C165EFE840E0CC02AAC07 /* InfoPlist.strings in Resources */,
+				D17A643604080318001FE253 /* yRaisedToX.pct in Resources */,
+				D17A643804080AFF001FE253 /* squared.pct in Resources */,
+				D14CB86704087FC7001FE253 /* acos.pct in Resources */,
+				D14CB86904087FE2001FE253 /* asin.pct in Resources */,
+				D14CB86B04087FEA001FE253 /* atan.pct in Resources */,
+				D14CB87104088008001FE253 /* sqrt.pct in Resources */,
+				D14CB87304088016001FE253 /* tenRaisedToX.pct in Resources */,
+				D14CB8750408821C001FE253 /* acosh.pct in Resources */,
+				D14CB87704088240001FE253 /* asinh.pct in Resources */,
+				D14CB87904088249001FE253 /* atanh.pct in Resources */,
+				D14CB87B0408891B001FE253 /* swapXM.pct in Resources */,
+				D14CB87D04088926001FE253 /* swapXY.pct in Resources */,
+				D14CB87F04088930001FE253 /* swapYM.pct in Resources */,
+				D12B370C04098D41001FE253 /* AsciiTable.nib in Resources */,
+				D119F27F0409E3F1001FE253 /* GeekCalc.icns in Resources */,
+				D145D8AC040E7BCF00660417 /* multiply.pct in Resources */,
+				D157DB44040F2A5D00660417 /* xback.pct in Resources */,
+				D1FB371E040FCF3B00660417 /* yback.pct in Resources */,
+				D10CC8A90411C6E2001FE253 /* eRaisedToX.pct in Resources */,
+				D1A8979904572E3500660417 /* logXY.pct in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D1DB77ED1067667C001CCAF9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D1DB77EE1067667C001CCAF9 /* MainMenu.nib in Resources */,
+				D1DB77EF1067667C001CCAF9 /* InfoPlist.strings in Resources */,
+				D1DB77F01067667C001CCAF9 /* yRaisedToX.pct in Resources */,
+				D1DB77F11067667C001CCAF9 /* squared.pct in Resources */,
+				D1DB77F21067667C001CCAF9 /* acos.pct in Resources */,
+				D1DB77F31067667C001CCAF9 /* asin.pct in Resources */,
+				D1DB77F41067667C001CCAF9 /* atan.pct in Resources */,
+				D1DB77F51067667C001CCAF9 /* sqrt.pct in Resources */,
+				D1DB77F61067667C001CCAF9 /* tenRaisedToX.pct in Resources */,
+				D1DB77F71067667C001CCAF9 /* acosh.pct in Resources */,
+				D1DB77F81067667C001CCAF9 /* asinh.pct in Resources */,
+				D1DB77F91067667C001CCAF9 /* atanh.pct in Resources */,
+				D1DB77FA1067667C001CCAF9 /* swapXM.pct in Resources */,
+				D1DB77FB1067667C001CCAF9 /* swapXY.pct in Resources */,
+				D1DB77FC1067667C001CCAF9 /* swapYM.pct in Resources */,
+				D1DB77FD1067667C001CCAF9 /* AsciiTable.nib in Resources */,
+				D1DB77FE1067667C001CCAF9 /* GeekCalc.icns in Resources */,
+				D1DB77FF1067667C001CCAF9 /* multiply.pct in Resources */,
+				D1DB78001067667C001CCAF9 /* xback.pct in Resources */,
+				D1DB78011067667C001CCAF9 /* yback.pct in Resources */,
+				D1DB78021067667C001CCAF9 /* eRaisedToX.pct in Resources */,
+				D1DB78031067667C001CCAF9 /* logXY.pct in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		29B9732BFDCFA39411CA2CEA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				29B9732CFDCFA39411CA2CEA /* main.m in Sources */,
+				D16733980405B353001FE252 /* Controller.m in Sources */,
+				D13230F8040BEBBE00660417 /* CalcWindow.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D1DB78041067667C001CCAF9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D1DB78051067667C001CCAF9 /* main.m in Sources */,
+				D1DB78061067667C001CCAF9 /* Controller.m in Sources */,
+				D1DB78071067667C001CCAF9 /* CalcWindow.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		089C165CFE840E0CC02AAC07 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				089C165DFE840E0CC02AAC07 /* English */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		29B97318FDCFA39411CA2CEA /* MainMenu.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				29B97319FDCFA39411CA2CEA /* English */,
+			);
+			name = MainMenu.nib;
+			sourceTree = "<group>";
+		};
+		D12B370A04098D41001FE253 /* AsciiTable.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D12B370B04098D41001FE253 /* English */,
+			);
+			name = AsciiTable.nib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D1DB780B1067667C001CCAF9 /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = GeekCalc_Prefix.h;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = "Info-GeekCalc__Upgraded_.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = GeekCalc;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = app;
+				ZERO_LINK = YES;
+			};
+			name = Development;
+		};
+		D1DB780C1067667C001CCAF9 /* Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = GeekCalc_Prefix.h;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = "Info-GeekCalc__Upgraded_.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_LDFLAGS = "";
+				PREBINDING = NO;
+				PRODUCT_NAME = GeekCalc;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = app;
+				ZERO_LINK = NO;
+			};
+			name = Deployment;
+		};
+		D1DB780D1067667C001CCAF9 /* Default */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = GeekCalc_Prefix.h;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = "Info-GeekCalc__Upgraded_.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = GeekCalc;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = app;
+			};
+			name = Default;
+		};
+		D1E64D9D08A825740092A58C /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				HEADER_SEARCH_PATHS = "";
+				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRECOMPILE_PREFIX_HEADER = YES;
+				PREFIX_HEADER = GeekCalc_Prefix.h;
+				PRODUCT_NAME = GeekCalc;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = app;
+				ZERO_LINK = YES;
+			};
+			name = Development;
+		};
+		D1E64D9E08A825740092A58C /* Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				HEADER_SEARCH_PATHS = "";
+				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_LDFLAGS = "";
+				PREBINDING = NO;
+				PRECOMPILE_PREFIX_HEADER = YES;
+				PREFIX_HEADER = GeekCalc_Prefix.h;
+				PRODUCT_NAME = GeekCalc;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = app;
+				ZERO_LINK = NO;
+			};
+			name = Deployment;
+		};
+		D1E64D9F08A825740092A58C /* Default */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = "";
+				HEADER_SEARCH_PATHS = "";
+				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRECOMPILE_PREFIX_HEADER = YES;
+				PREFIX_HEADER = GeekCalc_Prefix.h;
+				PRODUCT_NAME = GeekCalc;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = app;
+			};
+			name = Default;
+		};
+		D1E64DA108A825740092A58C /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				SDKROOT = macosx10.6;
+			};
+			name = Development;
+		};
+		D1E64DA208A825740092A58C /* Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				SDKROOT = macosx10.6;
+			};
+			name = Deployment;
+		};
+		D1E64DA308A825740092A58C /* Default */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				SDKROOT = macosx10.6;
+			};
+			name = Default;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D1DB780A1067667C001CCAF9 /* Build configuration list for PBXNativeTarget "GeekCalc (Upgraded)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D1DB780B1067667C001CCAF9 /* Development */,
+				D1DB780C1067667C001CCAF9 /* Deployment */,
+				D1DB780D1067667C001CCAF9 /* Default */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Default;
+		};
+		D1E64D9C08A825740092A58C /* Build configuration list for PBXApplicationTarget "GeekCalc" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D1E64D9D08A825740092A58C /* Development */,
+				D1E64D9E08A825740092A58C /* Deployment */,
+				D1E64D9F08A825740092A58C /* Default */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Default;
+		};
+		D1E64DA008A825740092A58C /* Build configuration list for PBXProject "GeekCalc" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D1E64DA108A825740092A58C /* Development */,
+				D1E64DA208A825740092A58C /* Deployment */,
+				D1E64DA308A825740092A58C /* Default */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Default;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}
