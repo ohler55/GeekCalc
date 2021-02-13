@@ -1,0 +1,828 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="17701" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment version="1060" identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="17701"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="NSApplication">
+            <connections>
+                <outlet property="delegate" destination="229" id="423"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <window title="GeekCalc" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" animationBehavior="default" id="21" userLabel="Window" customClass="CalcWindow">
+            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" texturedBackground="YES"/>
+            <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+            <rect key="contentRect" x="77" y="437" width="626" height="264"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1415"/>
+            <value key="minSize" type="size" width="213" height="107"/>
+            <view key="contentView" id="2">
+                <rect key="frame" x="0.0" y="0.0" width="626" height="264"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView fixedFrame="YES" id="435">
+                        <rect key="frame" x="20" y="211" width="290" height="15"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="axesIndependently" image="yback" id="452"/>
+                    </imageView>
+                    <textField verticalHuggingPriority="750" fixedFrame="YES" id="250">
+                        <rect key="frame" x="21" y="211" width="288" height="14"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" sendsActionOnEndEditing="YES" state="on" alignment="right" id="441">
+                            <font key="font" metaFont="smallSystem"/>
+                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <imageView fixedFrame="YES" id="434">
+                        <rect key="frame" x="316" y="211" width="290" height="15"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="axesIndependently" image="yback" id="451"/>
+                    </imageView>
+                    <textField verticalHuggingPriority="750" fixedFrame="YES" id="251">
+                        <rect key="frame" x="315" y="211" width="290" height="14"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" sendsActionOnEndEditing="YES" state="on" alignment="right" id="442">
+                            <font key="font" metaFont="smallSystem"/>
+                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <imageView fixedFrame="YES" id="433">
+                        <rect key="frame" x="20" y="229" width="586" height="35"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" image="xback" id="450"/>
+                    </imageView>
+                    <textField verticalHuggingPriority="750" fixedFrame="YES" id="197">
+                        <rect key="frame" x="20" y="226" width="586" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" sendsActionOnEndEditing="YES" state="on" alignment="right" id="440">
+                            <font key="font" size="36" name="Courier"/>
+                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" preferredMaxLayoutWidth="16" id="252">
+                        <rect key="frame" x="-1" y="210" width="20" height="17"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="right" title="Y" id="443">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" preferredMaxLayoutWidth="16" id="253">
+                        <rect key="frame" x="601" y="210" width="20" height="17"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="right" title="M" id="444">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <matrix verticalHuggingPriority="750" fixedFrame="YES" mode="highlight" allowsEmptySelection="NO" autosizesCells="NO" id="357">
+                        <rect key="frame" x="513" y="16" width="51" height="159"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.90196103000000005" green="0.90196103000000005" blue="0.90196103000000005" alpha="1" colorSpace="calibratedRGB"/>
+                        <size key="cellSize" width="51" height="28"/>
+                        <size key="intercellSpacing" width="0.0" height="-2"/>
+                        <buttonCell key="prototype" type="push" title="and" bezelStyle="rounded" alignment="center" borderStyle="border" tag="-1" inset="2" id="459">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <cells>
+                            <column>
+                                <buttonCell type="bevel" title="MC" alternateTitle="memClear" bezelStyle="regularSquare" alignment="center" state="on" borderStyle="border" tag="1" inset="2" id="352">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="smallSystem"/>
+                                </buttonCell>
+                                <buttonCell type="bevel" title="M+" alternateTitle="memAdd" bezelStyle="regularSquare" alignment="center" borderStyle="border" tag="1" inset="2" id="353">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="smallSystem"/>
+                                </buttonCell>
+                                <buttonCell type="bevel" title="MR" alternateTitle="memRecall" bezelStyle="regularSquare" alignment="center" borderStyle="border" tag="1" inset="2" id="355">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="smallSystem"/>
+                                </buttonCell>
+                                <buttonCell type="bevel" alternateTitle="swapXY" bezelStyle="regularSquare" image="swapXY" imagePosition="overlaps" alignment="center" borderStyle="border" tag="1" inset="2" id="354">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="smallSystem"/>
+                                </buttonCell>
+                                <buttonCell type="bevel" alternateTitle="swapXM" bezelStyle="regularSquare" image="swapXM" imagePosition="overlaps" alignment="center" borderStyle="border" tag="1" inset="2" id="358">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="smallSystem"/>
+                                </buttonCell>
+                                <buttonCell type="bevel" alternateTitle="swapYM" bezelStyle="regularSquare" image="swapYM" imagePosition="overlaps" alignment="center" borderStyle="border" tag="1" inset="2" id="356">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="smallSystem"/>
+                                </buttonCell>
+                            </column>
+                        </cells>
+                        <connections>
+                            <action selector="doOp:" target="229" id="360"/>
+                        </connections>
+                    </matrix>
+                    <button fixedFrame="YES" imageHugsTitle="YES" id="277">
+                        <rect key="frame" x="488" y="177" width="120" height="29"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <buttonCell key="cell" type="bevel" title="ASCII Table" bezelStyle="regularSquare" alignment="center" borderStyle="border" inset="2" id="448">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="showAsciiTable:" target="229" id="407"/>
+                        </connections>
+                    </button>
+                    <popUpButton verticalHuggingPriority="750" fixedFrame="YES" tag="10" imageHugsTitle="YES" id="259">
+                        <rect key="frame" x="17" y="179" width="170" height="26"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <popUpButtonCell key="cell" type="push" title="Decimal" bezelStyle="rounded" alignment="left" lineBreakMode="clipping" state="on" borderStyle="borderAndBezel" tag="10" inset="2" arrowPosition="arrowAtCenter" preferredEdge="maxY" selectedItem="257" id="445">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="menu"/>
+                            <menu key="menu" title="OtherViews" id="255">
+                                <items>
+                                    <menuItem title="Decimal" state="on" tag="10" id="257"/>
+                                    <menuItem title="Hexadecimal" tag="16" id="402"/>
+                                    <menuItem title="Octal" tag="8" id="258"/>
+                                    <menuItem title="Binary" tag="2" id="393"/>
+                                    <menuItem title="ASCII" tag="256" id="394"/>
+                                </items>
+                            </menu>
+                        </popUpButtonCell>
+                        <connections>
+                            <action selector="setBase:" target="229" id="401"/>
+                        </connections>
+                    </popUpButton>
+                    <matrix verticalHuggingPriority="750" fixedFrame="YES" mode="highlight" allowsEmptySelection="NO" autosizesCells="NO" id="199">
+                        <rect key="frame" x="389" y="12" width="120" height="163"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.80000000999999998" green="0.80000000999999998" blue="0.80000000999999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <size key="cellSize" width="40" height="28"/>
+                        <size key="intercellSpacing" width="0.0" height="-2"/>
+                        <buttonCell key="prototype" type="push" title="0" bezelStyle="rounded" alignment="center" borderStyle="border" tag="-1" inset="2" id="454">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <cells>
+                            <column>
+                                <buttonCell type="bevel" title="D" bezelStyle="regularSquare" alignment="center" state="on" borderStyle="border" tag="13" inset="2" id="211">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <buttonCell type="bevel" title="A" bezelStyle="regularSquare" alignment="center" borderStyle="border" tag="10" inset="2" id="214">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <buttonCell type="bevel" title="7" bezelStyle="regularSquare" alignment="center" borderStyle="border" tag="7" inset="2" id="217">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <buttonCell type="bevel" title="4" bezelStyle="regularSquare" alignment="center" borderStyle="border" tag="4" inset="2" id="220">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <buttonCell type="bevel" title="1" bezelStyle="regularSquare" alignment="center" borderStyle="border" tag="1" inset="2" id="223">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <buttonCell type="bevel" title="." bezelStyle="regularSquare" alignment="center" borderStyle="border" tag="-1" inset="2" id="226">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                            </column>
+                            <column>
+                                <buttonCell type="bevel" title="E" bezelStyle="regularSquare" alignment="center" borderStyle="border" tag="14" inset="2" id="212">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <buttonCell type="bevel" title="B" bezelStyle="regularSquare" alignment="center" borderStyle="border" tag="11" inset="2" id="215">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <buttonCell type="bevel" title="8" bezelStyle="regularSquare" alignment="center" borderStyle="border" tag="8" inset="2" id="218">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <buttonCell type="bevel" title="5" bezelStyle="regularSquare" alignment="center" borderStyle="border" tag="5" inset="2" id="221">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <buttonCell type="bevel" title="2" bezelStyle="regularSquare" alignment="center" borderStyle="border" tag="2" inset="2" id="224">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <buttonCell type="bevel" title="0" bezelStyle="regularSquare" alignment="center" borderStyle="border" inset="2" id="227">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                            </column>
+                            <column>
+                                <buttonCell type="bevel" title="F" bezelStyle="regularSquare" alignment="center" borderStyle="border" tag="15" inset="2" id="213">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <buttonCell type="bevel" title="C" bezelStyle="regularSquare" alignment="center" borderStyle="border" tag="12" inset="2" id="216">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <buttonCell type="bevel" title="9" bezelStyle="regularSquare" alignment="center" borderStyle="border" tag="9" inset="2" id="219">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <buttonCell type="bevel" title="6" bezelStyle="regularSquare" alignment="center" borderStyle="border" tag="6" inset="2" id="222">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <buttonCell type="bevel" title="3" bezelStyle="regularSquare" alignment="center" borderStyle="border" tag="3" inset="2" id="225">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <buttonCell type="bevel" title="EE" bezelStyle="regularSquare" alignment="center" borderStyle="border" tag="-2" inset="2" id="228">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                            </column>
+                        </cells>
+                        <connections>
+                            <action selector="enterDigit:" target="229" id="230"/>
+                        </connections>
+                    </matrix>
+                    <matrix verticalHuggingPriority="750" fixedFrame="YES" mode="highlight" allowsEmptySelection="NO" autosizesCells="NO" id="321">
+                        <rect key="frame" x="18" y="17" width="224" height="158"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.90196103000000005" green="0.90196103000000005" blue="0.90196103000000005" alpha="1" colorSpace="calibratedRGB"/>
+                        <size key="cellSize" width="56" height="28"/>
+                        <size key="intercellSpacing" width="0.0" height="-2"/>
+                        <buttonCell key="prototype" type="push" title="sin" bezelStyle="rounded" alignment="center" borderStyle="border" tag="-1" inset="2" id="457">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <cells>
+                            <column>
+                                <buttonCell type="bevel" title="sin" alternateTitle="sin" bezelStyle="regularSquare" alignment="center" borderStyle="border" tag="1" inset="2" id="319">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="smallSystem"/>
+                                </buttonCell>
+                                <buttonCell type="bevel" title="cos" alternateTitle="cos" bezelStyle="regularSquare" alignment="center" borderStyle="border" tag="1" inset="2" id="325">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="smallSystem"/>
+                                </buttonCell>
+                                <buttonCell type="bevel" title="tan" alternateTitle="tan" bezelStyle="regularSquare" alignment="center" borderStyle="border" tag="1" inset="2" id="329">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="smallSystem"/>
+                                </buttonCell>
+                                <buttonCell type="bevel" title="floor" alternateTitle="floor" bezelStyle="regularSquare" alignment="center" borderStyle="border" tag="1" inset="2" id="333">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="smallSystem"/>
+                                </buttonCell>
+                                <buttonCell type="bevel" title="log" alternateTitle="log" bezelStyle="regularSquare" alignment="center" borderStyle="border" tag="1" inset="2" id="337">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="smallSystem"/>
+                                </buttonCell>
+                                <buttonCell type="bevel" title="logXbaseY" alternateTitle="logXbaseY" bezelStyle="regularSquare" image="logXY" imagePosition="only" alignment="center" borderStyle="border" tag="2" inset="2" id="341">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="smallSystem"/>
+                                </buttonCell>
+                            </column>
+                            <column>
+                                <buttonCell type="bevel" alternateTitle="asin" bezelStyle="regularSquare" image="asin" imagePosition="only" alignment="center" borderStyle="border" tag="1" inset="2" id="322">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="smallSystem"/>
+                                </buttonCell>
+                                <buttonCell type="bevel" alternateTitle="acos" bezelStyle="regularSquare" image="acos" imagePosition="only" alignment="center" borderStyle="border" tag="1" inset="2" id="326">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="smallSystem"/>
+                                </buttonCell>
+                                <buttonCell type="bevel" alternateTitle="atan" bezelStyle="regularSquare" image="atan" imagePosition="only" alignment="center" borderStyle="border" tag="1" inset="2" id="330">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="smallSystem"/>
+                                </buttonCell>
+                                <buttonCell type="bevel" title="ceil" alternateTitle="ceil" bezelStyle="regularSquare" alignment="center" borderStyle="border" tag="1" inset="2" id="334">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="smallSystem"/>
+                                </buttonCell>
+                                <buttonCell type="bevel" alternateTitle="tenRaisedToX" bezelStyle="regularSquare" image="tenRaisedToX" imagePosition="only" alignment="center" borderStyle="border" tag="1" inset="2" id="338">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="smallSystem"/>
+                                </buttonCell>
+                                <buttonCell type="bevel" title="1/x" alternateTitle="invert" bezelStyle="regularSquare" alignment="center" borderStyle="border" tag="1" inset="2" id="342">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="smallSystem"/>
+                                </buttonCell>
+                            </column>
+                            <column>
+                                <buttonCell type="bevel" title="sinh" alternateTitle="sinh" bezelStyle="regularSquare" alignment="center" borderStyle="border" tag="1" inset="2" id="323">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="smallSystem"/>
+                                </buttonCell>
+                                <buttonCell type="bevel" title="cosh" alternateTitle="cosh" bezelStyle="regularSquare" alignment="center" borderStyle="border" tag="1" inset="2" id="327">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="smallSystem"/>
+                                </buttonCell>
+                                <buttonCell type="bevel" title="tanh" alternateTitle="tanh" bezelStyle="regularSquare" alignment="center" borderStyle="border" tag="1" inset="2" id="331">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="smallSystem"/>
+                                </buttonCell>
+                                <buttonCell type="bevel" title="round" alternateTitle="round" bezelStyle="regularSquare" alignment="center" borderStyle="border" tag="1" inset="2" id="335">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="smallSystem"/>
+                                </buttonCell>
+                                <buttonCell type="bevel" title="ln" alternateTitle="ln" bezelStyle="regularSquare" alignment="center" borderStyle="border" tag="1" inset="2" id="339">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="smallSystem"/>
+                                </buttonCell>
+                                <buttonCell type="bevel" title=" e " alternateTitle="e" bezelStyle="regularSquare" alignment="center" borderStyle="border" tag="1" inset="2" id="343">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="smallSystem"/>
+                                </buttonCell>
+                            </column>
+                            <column>
+                                <buttonCell type="bevel" alternateTitle="asinh" bezelStyle="regularSquare" image="asinh" imagePosition="only" alignment="center" borderStyle="border" tag="1" inset="2" id="324">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="smallSystem"/>
+                                </buttonCell>
+                                <buttonCell type="bevel" alternateTitle="acosh" bezelStyle="regularSquare" image="acosh" imagePosition="only" alignment="center" borderStyle="border" tag="1" inset="2" id="328">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="smallSystem"/>
+                                </buttonCell>
+                                <buttonCell type="bevel" alternateTitle="atanh" bezelStyle="regularSquare" image="atanh" imagePosition="only" alignment="center" borderStyle="border" tag="1" inset="2" id="332">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="smallSystem"/>
+                                </buttonCell>
+                                <buttonCell type="bevel" title="trunc" alternateTitle="trunc" bezelStyle="regularSquare" alignment="center" borderStyle="border" tag="2" inset="2" id="336">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="smallSystem"/>
+                                </buttonCell>
+                                <buttonCell type="bevel" alternateTitle="eRaisedToX" bezelStyle="regularSquare" image="eRaisedToX" imagePosition="only" alignment="center" borderStyle="border" tag="1" inset="2" id="340">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="smallSystem"/>
+                                </buttonCell>
+                                <buttonCell type="bevel" title="π" alternateTitle="pi" bezelStyle="regularSquare" alignment="center" borderStyle="border" tag="1" inset="2" id="344">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="smallSystem"/>
+                                    <string key="keyEquivalent">p</string>
+                                    <modifierMask key="keyEquivalentModifierMask" option="YES"/>
+                                </buttonCell>
+                            </column>
+                        </cells>
+                        <connections>
+                            <action selector="doOp:" target="229" id="361"/>
+                        </connections>
+                    </matrix>
+                    <popUpButton verticalHuggingPriority="750" fixedFrame="YES" imageHugsTitle="YES" id="261">
+                        <rect key="frame" x="291" y="179" width="113" height="26"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <popUpButtonCell key="cell" type="push" title="Degrees" bezelStyle="rounded" alignment="left" lineBreakMode="clipping" state="on" borderStyle="borderAndBezel" inset="2" arrowPosition="arrowAtCenter" preferredEdge="maxY" selectedItem="264" id="446">
+                            <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="menu"/>
+                            <menu key="menu" title="OtherViews" id="260">
+                                <items>
+                                    <menuItem title="Degrees" state="on" id="264"/>
+                                    <menuItem title="Radians" tag="1" id="405"/>
+                                </items>
+                            </menu>
+                        </popUpButtonCell>
+                        <connections>
+                            <action selector="setAngleType:" target="229" id="403"/>
+                        </connections>
+                    </popUpButton>
+                    <matrix verticalHuggingPriority="750" fixedFrame="YES" mode="highlight" allowsEmptySelection="NO" autosizesCells="NO" id="290">
+                        <rect key="frame" x="295" y="11" width="90" height="164"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.90196103000000005" green="0.90196103000000005" blue="0.90196103000000005" alpha="1" colorSpace="calibratedRGB"/>
+                        <size key="cellSize" width="45" height="28"/>
+                        <size key="intercellSpacing" width="0.0" height="-2"/>
+                        <buttonCell key="prototype" type="push" title="(" bezelStyle="rounded" alignment="center" borderStyle="border" tag="-1" inset="2" id="456">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <cells>
+                            <column>
+                                <buttonCell type="bevel" bezelStyle="regularSquare" image="multiply" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" tag="2" inset="2" id="374">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <buttonCell type="bevel" title="+" alternateTitle="add" bezelStyle="regularSquare" alignment="center" borderStyle="border" tag="2" inset="2" id="376">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <buttonCell type="bevel" title="±" alternateTitle="changeSign" bezelStyle="regularSquare" alignment="center" borderStyle="border" tag="1" inset="2" id="378">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <buttonCell type="bevel" title="%" alternateTitle="modulo" bezelStyle="regularSquare" alignment="center" borderStyle="border" tag="2" inset="2" id="380">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <buttonCell type="bevel" title="+1" alternateTitle="addOne" bezelStyle="regularSquare" alignment="center" borderStyle="border" tag="1" inset="2" id="382">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="smallSystem"/>
+                                </buttonCell>
+                                <buttonCell type="bevel" alternateTitle="squared" bezelStyle="regularSquare" image="squared" imagePosition="overlaps" alignment="center" borderStyle="border" tag="1" inset="2" id="384">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="smallSystem"/>
+                                </buttonCell>
+                            </column>
+                            <column>
+                                <buttonCell type="bevel" title="÷" alternateTitle="divide" bezelStyle="regularSquare" alignment="center" borderStyle="border" tag="2" inset="2" id="375">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <buttonCell type="bevel" title="-" alternateTitle="subtract" bezelStyle="regularSquare" alignment="center" borderStyle="border" tag="7" inset="2" id="377">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <buttonCell type="bevel" title="x!" alternateTitle="factorial" bezelStyle="regularSquare" alignment="center" borderStyle="border" tag="1" inset="2" id="379">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="smallSystem"/>
+                                </buttonCell>
+                                <buttonCell type="bevel" alternateTitle="yRaisedToX" bezelStyle="regularSquare" image="yRaisedToX" imagePosition="below" alignment="center" borderStyle="border" tag="2" inset="2" id="381">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="smallSystem"/>
+                                </buttonCell>
+                                <buttonCell type="bevel" title="-1" alternateTitle="subOne" bezelStyle="regularSquare" alignment="center" borderStyle="border" tag="1" inset="2" id="383">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="smallSystem"/>
+                                </buttonCell>
+                                <buttonCell type="bevel" alternateTitle="sqrt" bezelStyle="regularSquare" image="sqrt" imagePosition="only" alignment="center" borderStyle="border" tag="1" inset="2" id="385">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="smallSystem"/>
+                                </buttonCell>
+                            </column>
+                        </cells>
+                        <connections>
+                            <action selector="doOp:" target="229" id="302"/>
+                        </connections>
+                    </matrix>
+                    <matrix verticalHuggingPriority="750" fixedFrame="YES" mode="highlight" allowsEmptySelection="NO" autosizesCells="NO" id="346">
+                        <rect key="frame" x="246" y="11" width="45" height="164"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.90196103000000005" green="0.90196103000000005" blue="0.90196103000000005" alpha="1" colorSpace="calibratedRGB"/>
+                        <size key="cellSize" width="45" height="28"/>
+                        <size key="intercellSpacing" width="0.0" height="-2"/>
+                        <buttonCell key="prototype" type="push" title="and" bezelStyle="rounded" alignment="center" borderStyle="border" tag="-1" inset="2" id="458">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <cells>
+                            <column>
+                                <buttonCell type="bevel" title="and" alternateTitle="and" bezelStyle="regularSquare" alignment="center" state="on" borderStyle="border" tag="2" inset="2" id="345">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="smallSystem"/>
+                                </buttonCell>
+                                <buttonCell type="bevel" title="or" alternateTitle="or" bezelStyle="regularSquare" alignment="center" borderStyle="border" tag="2" inset="2" id="347">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="smallSystem"/>
+                                </buttonCell>
+                                <buttonCell type="bevel" title="xor" alternateTitle="xor" bezelStyle="regularSquare" alignment="center" borderStyle="border" tag="2" inset="2" id="348">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="smallSystem"/>
+                                </buttonCell>
+                                <buttonCell type="bevel" title="~" alternateTitle="not" bezelStyle="regularSquare" alignment="center" borderStyle="border" tag="1" inset="2" id="349">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <buttonCell type="bevel" title="«" alternateTitle="shiftLeft" bezelStyle="regularSquare" alignment="center" borderStyle="border" tag="2" inset="2" id="350">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="smallSystem"/>
+                                </buttonCell>
+                                <buttonCell type="bevel" title="»" alternateTitle="shiftRight" bezelStyle="regularSquare" alignment="center" borderStyle="border" tag="2" inset="2" id="351">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                            </column>
+                        </cells>
+                        <connections>
+                            <action selector="doOp:" target="229" id="359"/>
+                        </connections>
+                    </matrix>
+                    <matrix verticalHuggingPriority="750" fixedFrame="YES" mode="highlight" autosizesCells="NO" id="238">
+                        <rect key="frame" x="568" y="120" width="40" height="55"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.90196103000000005" green="0.90196103000000005" blue="0.90196103000000005" alpha="1" colorSpace="calibratedRGB"/>
+                        <size key="cellSize" width="40" height="28"/>
+                        <size key="intercellSpacing" width="0.0" height="-2"/>
+                        <buttonCell key="prototype" type="push" title="=" bezelStyle="rounded" alignment="center" borderStyle="border" tag="-1" inset="2" id="455">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <cells>
+                            <column>
+                                <buttonCell type="bevel" title="C" bezelStyle="regularSquare" alignment="center" borderStyle="border" inset="2" id="386">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                    <connections>
+                                        <action selector="clear:" target="229" id="388"/>
+                                    </connections>
+                                </buttonCell>
+                                <buttonCell type="bevel" title="AC" bezelStyle="regularSquare" alignment="center" borderStyle="border" tag="1" inset="2" id="387">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                    <connections>
+                                        <action selector="clearAll:" target="229" id="389"/>
+                                    </connections>
+                                </buttonCell>
+                            </column>
+                        </cells>
+                    </matrix>
+                    <button fixedFrame="YES" imageHugsTitle="YES" id="285">
+                        <rect key="frame" x="568" y="17" width="40" height="80"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <buttonCell key="cell" type="bevel" title="=" alternateTitle="equals" bezelStyle="regularSquare" alignment="center" borderStyle="border" inset="2" id="449">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system" size="18"/>
+                            <string key="keyEquivalent" base64-UTF8="YES">
+DQ
+</string>
+                        </buttonCell>
+                        <connections>
+                            <action selector="doOp:" target="229" id="303"/>
+                        </connections>
+                    </button>
+                    <popUpButton verticalHuggingPriority="750" fixedFrame="YES" imageHugsTitle="YES" id="269">
+                        <rect key="frame" x="187" y="179" width="102" height="26"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <popUpButtonCell key="cell" type="push" title="Float" bezelStyle="rounded" alignment="left" lineBreakMode="clipping" state="on" borderStyle="borderAndBezel" inset="2" arrowPosition="arrowAtCenter" preferredEdge="maxY" selectedItem="268" id="447">
+                            <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="menu"/>
+                            <menu key="menu" title="OtherViews" id="265">
+                                <items>
+                                    <menuItem title="Float" state="on" id="268"/>
+                                    <menuItem title="UInt64" tag="64" id="406"/>
+                                    <menuItem title="Int64" tag="63" id="267"/>
+                                    <menuItem title="UInt32" tag="32" id="395"/>
+                                    <menuItem title="Int32" tag="31" id="396"/>
+                                    <menuItem title="UInt16" tag="16" id="397"/>
+                                    <menuItem title="Int16" tag="15" id="398"/>
+                                    <menuItem title="UInt8" tag="8" id="399"/>
+                                    <menuItem title="Int8" tag="7" id="400"/>
+                                </items>
+                            </menu>
+                        </popUpButtonCell>
+                        <connections>
+                            <action selector="setNumSize:" target="229" id="420"/>
+                        </connections>
+                    </popUpButton>
+                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" preferredMaxLayoutWidth="76" id="436">
+                        <rect key="frame" x="406" y="180" width="80" height="27"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="left" id="453">
+                            <font key="font" size="18" name="Optima-BoldItalic"/>
+                            <string key="title">GeekCalc
+</string>
+                            <color key="textColor" red="0.49803901" green="0.49803901" blue="0.49803901" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                </subviews>
+            </view>
+            <connections>
+                <outlet property="clearKey" destination="386" id="426"/>
+                <outlet property="controller" destination="229" id="427"/>
+                <outlet property="delegate" destination="229" id="438"/>
+                <outlet property="divideKey" destination="375" id="430"/>
+                <outlet property="eeKey" destination="228" id="431"/>
+                <outlet property="multiplyKey" destination="374" id="437"/>
+            </connections>
+            <point key="canvasLocation" x="140" y="104"/>
+        </window>
+        <menu title="MainMenu" systemMenu="main" id="29" userLabel="MainMenu">
+            <items>
+                <menuItem title="GeekCalc" id="56">
+                    <menu key="submenu" title="GeekCalc" systemMenu="apple" id="57">
+                        <items>
+                            <menuItem title="About GeekCalc" id="58">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="orderFrontStandardAboutPanel:" target="-2" id="142"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem isSeparatorItem="YES" id="196">
+                                <modifierMask key="keyEquivalentModifierMask" command="YES"/>
+                            </menuItem>
+                            <menuItem title="Services" id="131">
+                                <menu key="submenu" title="Services" systemMenu="services" id="130"/>
+                            </menuItem>
+                            <menuItem isSeparatorItem="YES" id="144">
+                                <modifierMask key="keyEquivalentModifierMask" command="YES"/>
+                            </menuItem>
+                            <menuItem title="Hide GeekCalc" keyEquivalent="h" id="134">
+                                <connections>
+                                    <action selector="hide:" target="-2" id="152"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Hide Others" keyEquivalent="h" id="145">
+                                <modifierMask key="keyEquivalentModifierMask" option="YES" command="YES"/>
+                                <connections>
+                                    <action selector="hideOtherApplications:" target="-2" id="146"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Show All" id="150">
+                                <connections>
+                                    <action selector="unhideAllApplications:" target="-2" id="153"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem isSeparatorItem="YES" id="149">
+                                <modifierMask key="keyEquivalentModifierMask" command="YES"/>
+                            </menuItem>
+                            <menuItem title="Quit GeekCalc" keyEquivalent="q" id="136">
+                                <connections>
+                                    <action selector="terminate:" target="-2" id="139"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
+                </menuItem>
+                <menuItem title="File" id="83">
+                    <menu key="submenu" title="File" id="81">
+                        <items>
+                            <menuItem title="New" keyEquivalent="n" id="82"/>
+                            <menuItem title="Open..." keyEquivalent="o" id="72"/>
+                            <menuItem title="Open Recent" id="124">
+                                <menu key="submenu" title="Open Recent" systemMenu="recentDocuments" id="125">
+                                    <items>
+                                        <menuItem title="Clear Menu" id="126">
+                                            <connections>
+                                                <action selector="clearRecentDocuments:" target="-1" id="127"/>
+                                            </connections>
+                                        </menuItem>
+                                    </items>
+                                </menu>
+                            </menuItem>
+                            <menuItem isSeparatorItem="YES" id="79">
+                                <modifierMask key="keyEquivalentModifierMask" command="YES"/>
+                            </menuItem>
+                            <menuItem title="Close" keyEquivalent="w" id="73">
+                                <connections>
+                                    <action selector="performClose:" target="-1" id="193"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Save" keyEquivalent="s" id="75"/>
+                            <menuItem title="Save As..." keyEquivalent="S" id="80"/>
+                            <menuItem title="Revert" id="112">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                            </menuItem>
+                            <menuItem isSeparatorItem="YES" id="74">
+                                <modifierMask key="keyEquivalentModifierMask" command="YES"/>
+                            </menuItem>
+                            <menuItem title="Page Setup..." keyEquivalent="P" id="77">
+                                <connections>
+                                    <action selector="runPageLayout:" target="-1" id="87"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Print..." keyEquivalent="p" id="78">
+                                <connections>
+                                    <action selector="print:" target="-1" id="86"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
+                </menuItem>
+                <menuItem title="Edit" id="163">
+                    <menu key="submenu" title="Edit" id="169">
+                        <items>
+                            <menuItem title="Undo" keyEquivalent="z" id="158">
+                                <connections>
+                                    <action selector="undo:" target="-1" id="180"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Redo" keyEquivalent="Z" id="173">
+                                <connections>
+                                    <action selector="redo:" target="-1" id="178"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem isSeparatorItem="YES" id="156">
+                                <modifierMask key="keyEquivalentModifierMask" command="YES"/>
+                            </menuItem>
+                            <menuItem title="Cut" keyEquivalent="x" id="160">
+                                <connections>
+                                    <action selector="cut:" target="-1" id="175"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Copy" keyEquivalent="c" id="157">
+                                <connections>
+                                    <action selector="copy:" target="-1" id="181"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Paste" keyEquivalent="v" id="171">
+                                <connections>
+                                    <action selector="paste:" target="-1" id="176"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Delete" id="164">
+                                <connections>
+                                    <action selector="delete:" target="-1" id="195"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Select All" keyEquivalent="a" id="172">
+                                <connections>
+                                    <action selector="selectAll:" target="-1" id="179"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem isSeparatorItem="YES" id="174">
+                                <modifierMask key="keyEquivalentModifierMask" command="YES"/>
+                            </menuItem>
+                            <menuItem title="Find" id="168">
+                                <menu key="submenu" title="Find" id="159">
+                                    <items>
+                                        <menuItem title="Find..." keyEquivalent="f" id="154"/>
+                                        <menuItem title="Find Next" keyEquivalent="g" id="167"/>
+                                        <menuItem title="Find Previous" keyEquivalent="d" id="162"/>
+                                        <menuItem title="Use Selection for Find" keyEquivalent="e" id="161"/>
+                                        <menuItem title="Scroll to Selection" keyEquivalent="j" id="155"/>
+                                    </items>
+                                </menu>
+                            </menuItem>
+                            <menuItem title="Spelling" id="184">
+                                <menu key="submenu" title="Spelling" id="185">
+                                    <items>
+                                        <menuItem title="Spelling..." keyEquivalent=":" id="187">
+                                            <connections>
+                                                <action selector="showGuessPanel:" target="-1" id="188"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Check Spelling" keyEquivalent=";" id="189">
+                                            <connections>
+                                                <action selector="checkSpelling:" target="-1" id="190"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Check Spelling as You Type" id="191">
+                                            <connections>
+                                                <action selector="toggleContinuousSpellChecking:" target="-1" id="192"/>
+                                            </connections>
+                                        </menuItem>
+                                    </items>
+                                </menu>
+                            </menuItem>
+                        </items>
+                    </menu>
+                </menuItem>
+                <menuItem title="Window" id="19">
+                    <menu key="submenu" title="Window" systemMenu="window" id="24">
+                        <items>
+                            <menuItem title="Minimize" keyEquivalent="m" id="23">
+                                <connections>
+                                    <action selector="performMiniaturize:" target="-1" id="37"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem isSeparatorItem="YES" id="92">
+                                <modifierMask key="keyEquivalentModifierMask" command="YES"/>
+                            </menuItem>
+                            <menuItem title="Bring All to Front" id="5">
+                                <connections>
+                                    <action selector="arrangeInFront:" target="-1" id="39"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
+                </menuItem>
+                <menuItem title="Help" id="103">
+                    <menu key="submenu" title="Help" id="106">
+                        <items>
+                            <menuItem title="GeekCalc Help" keyEquivalent="?" id="111">
+                                <connections>
+                                    <action selector="showHelp:" target="-1" id="122"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
+                </menuItem>
+            </items>
+        </menu>
+        <customObject id="229" userLabel="Controller" customClass="Controller">
+            <connections>
+                <outlet property="basePopup" destination="259" id="421"/>
+                <outlet property="bitPad" destination="346" id="429"/>
+                <outlet property="keyPad" destination="199" id="424"/>
+                <outlet property="mOut" destination="251" id="288"/>
+                <outlet property="mathPad" destination="321" id="428"/>
+                <outlet property="sizePopup" destination="269" id="422"/>
+                <outlet property="xOut" destination="197" id="249"/>
+                <outlet property="yOut" destination="250" id="287"/>
+            </connections>
+        </customObject>
+    </objects>
+    <resources>
+        <image name="acos" width="27" height="14"/>
+        <image name="acosh" width="33" height="14"/>
+        <image name="asin" width="24" height="14"/>
+        <image name="asinh" width="30" height="14"/>
+        <image name="atan" width="26" height="14"/>
+        <image name="atanh" width="32" height="14"/>
+        <image name="eRaisedToX" width="16" height="14"/>
+        <image name="logXY" width="31" height="14"/>
+        <image name="multiply" width="12" height="14"/>
+        <image name="sqrt" width="18" height="15"/>
+        <image name="squared" width="16" height="14"/>
+        <image name="swapXM" width="27" height="14"/>
+        <image name="swapXY" width="25" height="14"/>
+        <image name="swapYM" width="27" height="14"/>
+        <image name="tenRaisedToX" width="20" height="14"/>
+        <image name="xback" width="586" height="35"/>
+        <image name="yRaisedToX" width="16" height="14"/>
+        <image name="yback" width="290" height="16"/>
+    </resources>
+</document>

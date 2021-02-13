@@ -39,7 +39,7 @@
      * method since the first responder is not always the view we want and
      * controlling the first responder to be only the expression field or the
      * main view does not seem to be possible. */
-    if (NSKeyDown == [event type]) {
+    if (NSEventTypeKeyDown == [event type]) {
         [self keyDown: event];
     } else {
         [super sendEvent: event];
@@ -110,7 +110,7 @@
         id		c;
         int		i;
     
-        for (i = [cells count] - 1; 0 <= i; i--) {
+        for (i = (int)[cells count] - 1; 0 <= i; i--) {
             c = [cells objectAtIndex: i];
             if (![c isEnabled]) {
                 continue;

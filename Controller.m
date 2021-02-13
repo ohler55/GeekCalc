@@ -75,7 +75,7 @@
         yIsSet = YES;
         [self displayY];
     }
-    int	tag = [ [sender selectedCell] tag];
+    int	tag = (int)[ [sender selectedCell] tag];
     
     if (![self addDigit: tag]) {
         NSBeep();
@@ -201,7 +201,7 @@
 {
     NSButtonCell	*cell = [sender selectedCell];
     NSString		*method = [cell alternateTitle];
-    int			tag = [cell tag];
+    int			tag = (int)[cell tag];
 
     if (nil != x.err) {
 	NSBeep();
@@ -768,7 +768,7 @@
 
 - (IBAction)setBase:(id)sender
 {
-    [self setBaseValue: [ [sender selectedItem] tag]];
+    [self setBaseValue: (int)[ [sender selectedItem] tag]];
     [self displayX];
     [self displayY];
     [self displayM];
@@ -818,7 +818,7 @@
 
 - (IBAction)setAngleType:(id)sender
 {
-    angleType = [ [sender selectedItem] tag];
+    angleType = (int)[ [sender selectedItem] tag];
     [self displayX];
     [self displayY];
     [self displayM];
@@ -826,7 +826,7 @@
 
 - (IBAction)setNumSize:(id)sender
 {
-    int	tag = [[sender selectedItem] tag];
+    int	tag = (int)[[sender selectedItem] tag];
 
     if (tag == numSize) {
 	return;
@@ -908,9 +908,9 @@
     id		c;
     int		i, tag;
     
-    for (i = [cells count] - 1; 0 <= i; i--) {
+    for (i = (int)[cells count] - 1; 0 <= i; i--) {
         c = [cells objectAtIndex: i];
-        tag = [c tag];
+        tag = (int)[c tag];
         [c setEnabled: ((tag < base && 0 <= tag) || (0 > tag && 10 == base && 0 == numSize))];
     }
     [mathPad setEnabled: (0 == numSize)];
@@ -967,7 +967,7 @@
                 break;
             case 31:
             case 32:
-                 s = [NSString stringWithFormat:@"%08X", (unsigned long)(0x00000000FFFFFFFFULL & v.i)];
+                 s = [NSString stringWithFormat:@"%08lX", (unsigned long)(0x00000000FFFFFFFFULL & v.i)];
                 break;
             case 15:
             case 16:
@@ -1091,8 +1091,8 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification*)notification
 {
-    [self setBaseValue: [[basePopup selectedItem] tag]];
-    numSize = [[sizePopup selectedItem] tag];
+    [self setBaseValue: (int)[[basePopup selectedItem] tag]];
+    numSize = (int)[[sizePopup selectedItem] tag];
     [self clearAll: self];
  }
 
